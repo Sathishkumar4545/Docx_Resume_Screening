@@ -17,7 +17,7 @@ from spacy.matcher import PhraseMatcher
 import docx
 
 # Function to read resumes from the folder one by one
-mypath = 'C:/Users/Sathishkumar/Documents/Sample/docx'  # enter your path here where you saved the resumes
+mypath = 'C:/Users//Documents/Sample/docx'  # enter your path here where you saved the resumes
 onlyfiles = [os.path.join(mypath, f) for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
 
 
@@ -53,7 +53,7 @@ def create_profile(file):
     text = text.replace("\\n", "")
     text = text.lower()
     # below is the csv where we have all the keywords, you can customize your own
-    keyword_dict = pd.read_csv('C:/Users/Sathishkumar/Documents/Sample.csv')
+    keyword_dict = pd.read_csv('C:/Users//Documents/Sample.csv')
     stats_words = [nlp(text) for text in keyword_dict['Statistics'].dropna(axis=0)]
     NLP_words = [nlp(text) for text in keyword_dict['NLP'].dropna(axis=0)]
     ML_words = [nlp(text) for text in keyword_dict['Machine Learning'].dropna(axis=0)]
